@@ -8,7 +8,7 @@ Detect faces in photos and draw overlay images on it, the overlay drawn using ne
 - draw key points
 - draw any overlay
 
-<img src="resource/example/people_cover.png" alt="[ Cover Image ]" style="height: 100px;"/>
+<img height="150px" src="resource/example/people_cover.png" alt="[ Cover Image ]" style="height: 100px;"/>
 
 
 *This version 2 beta built on previous version snappy v1 beta*
