@@ -8,7 +8,7 @@ Detect faces in photos and draw overlay images on it, the overlay drawn using ne
 - draw key points
 - draw any overlay
 
-<img src="resource/examples/people_cover.png" alt="[ Cover Image ]" style="height: 100px;"/>
+<img src="resource/example/people_cover.png" alt="[ Cover Image ]" style="height: 100px;"/>
 
 
 *This version 2 beta built on previous version snappy v1 beta*
@@ -37,11 +37,11 @@ if you don't have anaconda download from [here](https://anaconda.org/)
 - Draw Mustache on face *(3 lines)*
  ```
  human_image = Image.open('<file_path>')
- 
+
  snappy2 = Snappy2()
  snappy2.set_mustache(human_image, mus_index=0)
  ```
- <img src="resource/examples/tony_mustache.PNG" alt="[ Mustache Image ]" style="height: 100px;"/>
+ <img src="resource/example/tony_mustache.PNG" alt="[ Mustache Image ]" style="height: 100px;"/>
 
 - Draw glasses on face *(3 lines)*
 ```
@@ -51,7 +51,7 @@ snappy2 = Snappy2()
 snappy2.set_glasses(human_image, gls_index=0)
 ```
 
-<img src="resource/examples/tony_glasses.PNG" alt="[ Glass Image ]" style="height: 100px;"/>
+<img src="resource/example/tony_glasses.PNG" alt="[ Glass Image ]" style="height: 100px;"/>
 
 - Draw ears on face *(3 lines)*
 ```
@@ -60,7 +60,7 @@ human_image = Image.open('<file_path>')
 snappy2 = Snappy2()
 snappy2.set_ears(human_image, gls_index=0)
 ```
-<img src="resource/examples/ears_on_face.PNG" alt="[ Ears Image ]" style="height: 100px;"/>
+<img src="resource/example/ears_on_face.PNG" alt="[ Ears Image ]" style="height: 100px;"/>
 
 For more examples and advanced use check (test/**Demo.py**)
 
