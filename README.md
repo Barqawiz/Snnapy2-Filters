@@ -18,7 +18,7 @@ Detect faces in photos and draw overlay images on it, the overlay drawn using ne
 2. Detector: if you want to use the library in more advanced way by getting key points dictionary.
 3. FacePainter: helper to draw on top of images based on received key points dictionary.
 
-<img height="300px" src="resource/example/arch.png" alt="[ Snappy2 Structure ]"/>
+<img height="350px" src="resource/example/arch.png" alt="[ Snappy2 Structure ]"/>
 
 ## Requirements
 Download the required libraries for code using following terminal command:
@@ -64,7 +64,7 @@ snappy2.set_ears(human_image, gls_index=0)
 ```
 <img height="300px" src="resource/example/ears_on_face.PNG" alt="[ Ears Image ]"/>
 
-For more examples and advanced use check (test/**Demo.py**)
+For more examples and code details use check (**Demo.py**)
 
 # Imports
 ```
@@ -72,7 +72,7 @@ import Snappy2 as snappy2
 ```
 
 ## Contributors
-1- Ahmad Barqawi (Developer)<br/>
+1- Ahmad Barqawi (ahmadai.com)<br/>
 2- Contribute and add your name here<br/>
 
 ## Disclaimer
