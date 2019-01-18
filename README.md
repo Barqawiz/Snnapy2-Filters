@@ -1,14 +1,14 @@
 # Snappy 2
 ## Introduction
-Detect faces in photos and draw overlay images on it, the overlay drawn using neural network that detect key-points in face.<br>
+Detect faces in photos and draw overlay images on it, the overlay drawn using neural network that detect face keypoints.<br>
 - draw glasses
 - draw mustache
 - draw hat
 - draw ears
-- draw key points
 - draw any overlay
+- draw text
 
-<img height="300px" src="resource/example/people_cover.png" alt="[ Cover Image ]"/>
+<img height="350px" src="resource/example/people_cover.png" alt="[ Cover Image ]"/>
 
 
 *This version 2 beta built on previous version snappy v1 beta*
@@ -18,7 +18,7 @@ Detect faces in photos and draw overlay images on it, the overlay drawn using ne
 2. Detector: if you want to use the library in more advanced way by getting key points dictionary.
 3. FacePainter: helper to draw on top of images based on received key points dictionary.
 
-<img height="350px" src="resource/example/arch.png" alt="[ Snappy2 Structure ]"/>
+<img height="300px" src="resource/example/arch.png" alt="[ Snappy2 Structure ]"/>
 
 ## Requirements
 Download the required libraries for code using following terminal command:
@@ -78,7 +78,7 @@ import Snappy2 as snappy2
 ## Disclaimer
 This library use photos available free in the internet, if any of example photos have license please contact the library owner directly to add the license or delete the content. Expected response on requests within 3 days.
 - Overlays provided from freepik
-- Faces in the video provided from unsplash free data set
+- Faces provided from unsplash free data set
 
 License
 -------
