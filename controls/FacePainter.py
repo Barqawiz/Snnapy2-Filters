@@ -105,7 +105,7 @@ class FacePainter:
                 img_overlay = img_overlay.resize((target_width, target_height), Image.ANTIALIAS)
                 img_overlay = img_overlay.rotate(angle, resample=Image.BICUBIC, expand=True)
 
-                if y_axis[9] < y_axis[7] or angle > 0:
+                if angle > 4:
                     if abs(y_axis[9] - y_axis[7]) > 10:
                         # slide a little
                         sx = sx - sm
