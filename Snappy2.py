@@ -178,7 +178,7 @@ class Snappy2:
         face_painter = FacePainter(img_human, key_properties)
         face_painter.draw_ears(img_overlay)
 
-    def set_text(self, object_image, draw_text, text_size,
+    def set_text(self, object_image, draw_text, text_size, text_fill='#FFFFFF',
                  v_position='bottom', h_position='center'):
         """
         draw text of received image
@@ -186,6 +186,7 @@ class Snappy2:
         :param object_image:
         :param draw_text:
         :param text_size:
+        :param text_fill: HTML color code
         :param v_position: bottom OR top
         :param h_position: left OR right OR center
         :return:
@@ -216,4 +217,4 @@ class Snappy2:
             elif v_position == 'center':
                 y = int(im_h/2) - int(f_h/2)
 
-            canvas.text((x,y), draw_text, font=font)
+            canvas.text((x,y), draw_text, font=font, fill=text_fill)

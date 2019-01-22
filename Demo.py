@@ -6,7 +6,7 @@ from Snappy2 import Snappy2
 parser = argparse.ArgumentParser()
 parser.add_argument("-d", "--demo", help="Demo number", type=float)
 
-DEFAULT_INDEX = 0
+DEFAULT_INDEX = 2
 
 human_image = Image.open('resource/images/test_images/front_face.jpg')
 
@@ -52,8 +52,8 @@ def draw_text():
 
     # create snnapy object to draw overlay
     snappy2 = Snappy2()
-    snappy2.set_text(image, 'Snappy2', 60, 'bottom')
-    image.show()
+    snappy2.set_text(human_image, 'Snappy2', 60, v_position='bottom')
+    human_image.show()
 
 
 if __name__ == '__main__':
