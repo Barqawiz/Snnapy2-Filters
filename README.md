@@ -31,7 +31,7 @@ pip install -r requirements.txt
 ```
 cd requirements
 conda env create -f snappy2.yml
-soruce activate snappy2.yml
+soruce activate snappy2
 ```
 if you don't have anaconda download from [here](https://anaconda.org/)
 
