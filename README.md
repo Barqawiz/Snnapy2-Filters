@@ -1,6 +1,6 @@
 # Snappy 2
 ## Introduction
-Detect faces in photos and draw overlay images on it, the overlay drawn using neural network that detect face keypoints.<br>
+Detect faces in photos and draw overlay images on it, the overlay drawn using neural network that detects face keypoints.<br>
 - draw glasses
 - draw mustache
 - draw hat
@@ -76,7 +76,7 @@ import Snappy2 as snappy2
 2- Contribute and add your name here<br/>
 
 ## Disclaimer
-This library use photos available free in the internet, if any of example photos have license please contact the library owner directly to add the license or delete the content. Expected response on requests within 3 days.
+This library uses photos available free in the internet, if any of example photos have license please contact the library owner directly to add the license or delete the content. Expected response on requests within 3 days.
 - Overlays provided from freepik
 - Faces provided from unsplash free data set
 
