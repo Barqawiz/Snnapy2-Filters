@@ -26,7 +26,7 @@ from keras.models import load_model
 import numpy as np
 from utils.Utility import Utility
 import os
-
+import dlib
 
 
 class Detector:
@@ -37,8 +37,9 @@ class Detector:
     """
     def __init__(self):
         base_folder = os.path.dirname(__file__)
-        self.face_cascade = cv2.CascadeClassifier(
-            os.path.join(base_folder,'../resource/haarcascades/haarcascade_frontalface_default.xml'))
+        #self.face_cascade = cv2.CascadeClassifier(
+        #    os.path.join(base_folder,'../resource/haarcascades/haarcascade_frontalface_default.xml'))
+        self.dnnFaceDetector = dlib.cnn_face_detection_model_v1("../resource/models/mmod_human_face_detector.dat")
         self.model = load_model(os.path.join(base_folder,  '../resource/models/keras_cv_base_model_1_avg.h5'))
 
     def detect_faces(self, gray_human_image):
@@ -48,14 +49,29 @@ class Detector:
         :return: face_properties a list of dictionary with following information (face, loc, size)
         """
         face_properties = []
-        faces = self.face_cascade.detectMultiScale(gray_human_image, 1.2, 7, minSize=(30, 30))
-        if len(faces) == 0:
-            faces = self.face_cascade.detectMultiScale(gray_human_image, 1.1, 8, minSize=(30, 30))
+        #faces = self.face_cascade.detectMultiScale(gray_human_image, 1.2, 7, minSize=(30, 30))
+        #if len(faces) == 0:
+        #    faces = self.face_cascade.detectMultiScale(gray_human_image, 1.1, 8, minSize=(30, 30))
 
-        for (x, y, w, h) in faces:
+        #for (x, y, w, h) in faces:
+            # 1- detect face area
+        #    roi_image = gray_human_image[y:y + h, x:x + w]
+        #    face_properties.append({'face': roi_image, 'loc': (x, y), 'size': (w, h)})
+
+
+        faces = self.dnnFaceDetector(gray_human_image, 1)
+
+  
+        for face in faces:
+            x = face.rect.left()
+            y = face.rect.top()
+            w = face.rect.right() - x
+            h = face.rect.bottom() - y
+            
             # 1- detect face area
             roi_image = gray_human_image[y:y + h, x:x + w]
             face_properties.append({'face': roi_image, 'loc': (x, y), 'size': (w, h)})
+
 
         return face_properties
 
