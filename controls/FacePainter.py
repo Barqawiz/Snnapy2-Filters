@@ -76,8 +76,12 @@ class FacePainter:
             if position == Constants.pos_eyes:
 
                 # common fixing values
-                # space_to_eye = y_axis[9] - face_y
-                x_margin += int((x_axis[6] - x_axis[8]) * 0.33)
+                x_margin += int((x_axis[6] - x_axis[8]) * 0.8)
+                l_space = (x_axis[10] - x_axis[1])
+                r_space = (x_axis[0] - x_axis[10])
+                print('*** left space: ' , l_space)
+                print('*** right space: ' , r_space)
+                x_slide += int(l_space-r_space)
 
                 # size change
                 target_width = int(x_axis[7] - x_axis[9]) + x_margin  # + extra margin (left and right)

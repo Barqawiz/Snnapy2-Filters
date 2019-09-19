@@ -28,8 +28,8 @@ class Utility:
     @staticmethod
     def calc_angle(x_axis, y_axis):
         angle1 = math.degrees(math.atan2(y_axis[8] - y_axis[9], x_axis[8] - x_axis[9]))
-
-        return -angle1
+        # print('*****' , angle1)
+        return angle1*0.8
 
     @staticmethod
     def reverse_nn_normalization(y_predict):
