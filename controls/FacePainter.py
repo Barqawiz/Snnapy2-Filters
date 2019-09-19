@@ -173,21 +173,20 @@ class FacePainter:
                 img_overlay = img_overlay.rotate(angle, resample=Image.BICUBIC, expand=True)
 
             elif position == Constants.pos_head:
+
                 # common fixing values
-                space_to_eye = int( (y_axis[9] - face_y)*0.3)
+                space_to_eye = int( (y_axis[9] - face_y))
                 x_margin += int(x_axis[6] - x_axis[8])*2
 
-                # print(space_to_eye)
-
                 # size change
-                target_width = int(x_axis[7] - x_axis[9]) + x_margin  # + extra margin (left and right)
+                target_width = int(x_axis[7] - x_axis[9]) + x_margin # extramargin (left and right)
                 overlay_width = int(img_overlay.size[0])
                 change_ratio = (target_width / overlay_width)
 
                 target_width = int(img_overlay.size[0] * change_ratio)
                 target_height = int(img_overlay.size[1] * change_ratio)
-                y_margin += int(target_height * 0.7)
-                y_margin += int(space_to_eye * 0.9)
+                y_margin += int(target_height)
+                #y_margin += int(space_to_eye * 0.1)
 
                 # angle change
                 angle = Utility.calc_angle(x_axis, y_axis) + extra_angle

@@ -10,6 +10,8 @@ Detect faces in photos and draw overlay images on it, the overlay drawn using ne
 - draw any overlay
 - draw text
 
+This brunch use dlib to detect face position which work better with GPU machines.
+
 <img height="350px" src="resource/example/people_cover.png" alt="[ Cover Image ]"/>
 
 
