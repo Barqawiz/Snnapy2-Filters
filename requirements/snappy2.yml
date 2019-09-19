@@ -1,0 +1,58 @@
+name: snappy2
+channels:
+  - conda-forge
+  - anaconda-fusion
+  - defaults
+dependencies:
+  - bzip2=1.0.8=h01d97ff_1
+  - ca-certificates=2019.9.11=hecc5488_0
+  - certifi=2019.9.11=py37_0
+  - dlib=19.17=py37h6199926_0
+  - jpeg=9c=h1de35cc_1001
+  - libblas=3.8.0=12_openblas
+  - libcblas=3.8.0=12_openblas
+  - libcxx=8.0.1=0
+  - libcxxabi=8.0.1=0
+  - libffi=3.2.1=h6de7cb9_1006
+  - libgfortran=4.0.0=2
+  - liblapack=3.8.0=12_openblas
+  - libopenblas=0.3.7=h4bb4525_1
+  - libpng=1.6.37=h2573ce8_0
+  - llvm-openmp=8.0.1=h770b8ee_0
+  - ncurses=6.1=h0a44026_1002
+  - numpy=1.17.2=py37h6b0580a_0
+  - openssl=1.1.1c=h01d97ff_0
+  - pip=19.2.3=py37_0
+  - python=3.7.3=h93065d6_1
+  - readline=8.0=hcfe32e1_0
+  - setuptools=41.2.0=py37_0
+  - sqlite=3.29.0=hb7d70f7_1
+  - tk=8.6.9=h2573ce8_1003
+  - wheel=0.33.6=py37_0
+  - xz=5.2.4=h1de35cc_1001
+  - zlib=1.2.11=h01d97ff_1006
+  - pip:
+    - absl-py==0.8.0
+    - astor==0.8.0
+    - gast==0.3.2
+    - google-pasta==0.1.7
+    - grpcio==1.23.0
+    - h5py==2.10.0
+    - keras==2.3.0
+    - keras-applications==1.0.8
+    - keras-preprocessing==1.1.0
+    - markdown==3.1.1
+    - opencv-python==4.1.1.26
+    - pillow==6.1.0
+    - protobuf==3.9.1
+    - pyyaml==5.1.2
+    - scipy==1.3.1
+    - six==1.12.0
+    - tensorboard==1.14.0
+    - tensorflow==1.14.0
+    - tensorflow-estimator==1.14.0
+    - termcolor==1.1.0
+    - werkzeug==0.16.0
+    - wrapt==1.11.2
+prefix: /Users/Jaguar/anaconda/envs/snappy2
+

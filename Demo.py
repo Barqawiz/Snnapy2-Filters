@@ -6,7 +6,7 @@ from Snappy2 import Snappy2
 parser = argparse.ArgumentParser()
 parser.add_argument("-d", "--demo", help="Demo number", type=float)
 
-DEFAULT_INDEX = 2
+DEFAULT_INDEX = 1
 
 human_image = Image.open('resource/images/test_images/front_face.jpg')
 

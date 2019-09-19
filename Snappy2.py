@@ -25,7 +25,7 @@ from controls.Detector import Detector
 from controls.FacePainter import FacePainter
 import PIL.Image as Image
 from PIL import ImageFont, ImageDraw
-#import cv2
+import cv2
 import numpy as np
 import os
 
