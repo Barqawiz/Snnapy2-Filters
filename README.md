@@ -32,7 +32,7 @@ pip install -r requirements.txt
 - Option 2: Import anaconda environment
 ```
 cd requirements
-conda env create -f snappy2.yml
+conda env create -f snappy2.yaml
 soruce activate snappy2
 ```
 if you don't have anaconda download from [here](https://anaconda.org/)
