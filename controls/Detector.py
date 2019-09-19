@@ -28,7 +28,6 @@ from utils.Utility import Utility
 import os
 
 
-
 class Detector:
     """
     Common class to detect areas of interest from images
