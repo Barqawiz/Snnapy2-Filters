@@ -1,5 +1,5 @@
 # Snappy 2
-[![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
+[![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu/#/en_US)
 
 ## Introduction
 Detect faces in photos and draw overlay images on it, the overlay drawn using neural network that detects face keypoints.<br>
