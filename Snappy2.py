@@ -59,8 +59,8 @@ class Snappy2:
         :param draw_pos: send one of following eyes | ears | head | mustache
         :return:
         """
-        image_gray = cv2.cvtColor(np.array(img_human), cv2.COLOR_BGR2GRAY)
-        face_properties = self.detector.detect_faces(image_gray)
+        #image_gray = cv2.cvtColor(np.array(img_human), cv2.COLOR_BGR2GRAY)
+        face_properties = self.detector.detect_faces(np.array(img_human))
         key_properties = self.detector.detect_key_points(face_properties)
 
         face_painter = FacePainter(img_human, key_properties)
@@ -94,8 +94,8 @@ class Snappy2:
         assert os.path.exists(file_overlay), 'Overlay image does not exist'
         img_overlay = Image.open(file_overlay).convert("RGBA")
 
-        image_gray = cv2.cvtColor(np.array(img_human), cv2.COLOR_BGR2GRAY)
-        face_properties = self.detector.detect_faces(image_gray)
+        #image_gray = cv2.cvtColor(np.array(img_human), cv2.COLOR_BGR2GRAY)
+        face_properties = self.detector.detect_faces(np.array(img_human))
         key_properties = self.detector.detect_key_points(face_properties)
 
         face_painter = FacePainter(img_human, key_properties)
@@ -117,8 +117,8 @@ class Snappy2:
         assert os.path.exists(file_overlay), 'Overlay image does not exist'
         img_overlay = Image.open(file_overlay).convert("RGBA")
 
-        image_gray = cv2.cvtColor(np.array(img_human), cv2.COLOR_BGR2GRAY)
-        face_properties = self.detector.detect_faces(image_gray)
+        #image_gray = cv2.cvtColor(np.array(img_human), cv2.COLOR_BGR2GRAY)
+        face_properties = self.detector.detect_faces(np.array(img_human))
         key_properties = self.detector.detect_key_points(face_properties)
 
         face_painter = FacePainter(img_human, key_properties)
@@ -145,8 +145,8 @@ class Snappy2:
         assert os.path.exists(file_overlay), 'Overlay image does not exist'
         img_overlay = Image.open(file_overlay).convert("RGBA")
 
-        image_gray = cv2.cvtColor(np.array(img_human), cv2.COLOR_BGR2GRAY)
-        face_properties = self.detector.detect_faces(image_gray)
+        #image_gray = cv2.cvtColor(np.array(img_human), cv2.COLOR_BGR2GRAY)
+        face_properties = self.detector.detect_faces(np.array(img_human))
         key_properties = self.detector.detect_key_points(face_properties)
 
         face_painter = FacePainter(img_human, key_properties)
@@ -171,8 +171,8 @@ class Snappy2:
         assert os.path.exists(file_overlay), 'Overlay image does not exist'
         img_overlay = Image.open(file_overlay).convert("RGBA")
 
-        image_gray = cv2.cvtColor(np.array(img_human), cv2.COLOR_BGR2GRAY)
-        face_properties = self.detector.detect_faces(image_gray)
+        #image_gray = cv2.cvtColor(np.array(img_human), cv2.COLOR_BGR2GRAY)
+        face_properties = self.detector.detect_faces(np.array(img_human))
         key_properties = self.detector.detect_key_points(face_properties)
 
         face_painter = FacePainter(img_human, key_properties)
