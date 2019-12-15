@@ -1,3 +1,35 @@
+Detector.py
+Today
+9:41 PM
+
+You edited an item
+Text
+Detector.py
+9:31 PM
+
+You edited an item
+Text
+Detector.py
+9:17 PM
+
+You edited an item
+Text
+Detector.py
+8:09 PM
+
+You edited an item
+Text
+Detector.py
+7:44 PM
+
+You edited an item
+Text
+Detector.py
+7:12 PM
+
+You uploaded an item
+Text
+Detector.py
 """
 License
 -------
@@ -26,7 +58,6 @@ from keras.models import load_model
 import numpy as np
 from utils.Utility import Utility
 import os
-import dlib
 
 
 class Detector:
@@ -39,39 +70,47 @@ class Detector:
         base_folder = os.path.dirname(__file__)
         #self.face_cascade = cv2.CascadeClassifier(
         #    os.path.join(base_folder,'../resource/haarcascades/haarcascade_frontalface_default.xml'))
-        self.dnnFaceDetector = dlib.cnn_face_detection_model_v1(os.path.join(base_folder,  '../resource/models/mmod_human_face_detector.dat'))
+        
+        DNN = "CAFFE" ## TF/CAFFE
+        if DNN == "CAFFE":
+            modelFile = "./resource/models/res10_300x300_ssd_iter_140000_fp16.caffemodel"
+            configFile = "./resource/models/deploy.prototxt"
+            self.net = cv2.dnn.readNetFromCaffe(configFile, modelFile)
+        else:
+            modelFile = "./resource/models/opencv_face_detector_uint8.pb"
+            configFile = "./resource/models/opencv_face_detector.pbtxt"
+            self.net = cv2.dnn.readNetFromTensorflow(modelFile, configFile)
+        
         self.model = load_model(os.path.join(base_folder,  '../resource/models/keras_cv_base_model_1_avg.h5'))
 
-    def detect_faces(self, gray_human_image):
+    def detect_faces(self, human_image):
         """
         Detect faces in image and return list of faces with related properties
-        :param gray_human_image: numpy gray image
+        :param human_image: numpy array image
         :return: face_properties a list of dictionary with following information (face, loc, size)
         """
         face_properties = []
+        conf_threshold = 0.5
+        image_height, image_width, _ = human_image.shape
+        print(human_image.shape)
         #faces = self.face_cascade.detectMultiScale(gray_human_image, 1.2, 7, minSize=(30, 30))
         #if len(faces) == 0:
         #    faces = self.face_cascade.detectMultiScale(gray_human_image, 1.1, 8, minSize=(30, 30))
 
-        #for (x, y, w, h) in faces:
-            # 1- detect face area
-        #    roi_image = gray_human_image[y:y + h, x:x + w]
-        #    face_properties.append({'face': roi_image, 'loc': (x, y), 'size': (w, h)})
+        blob = cv2.dnn.blobFromImage(human_image, 1.0, (300, 300), [104, 117, 123], False, False)
+ 
+        self.net.setInput(blob)
+        detections = self.net.forward()
+        for i in range(detections.shape[2]):
+            confidence = detections[0, 0, i, 2]
+            if confidence > conf_threshold:
+                x = int(detections[0, 0, i, 3] * image_width)
+                y = int(detections[0, 0, i, 4] * image_height)
+                w = int(detections[0, 0, i, 5] * image_width) - x
+                h = int(detections[0, 0, i, 6] * image_height) - y
 
-
-        faces = self.dnnFaceDetector(gray_human_image, 1)
-
-
-        for face in faces:
-            x = face.rect.left()
-            y = face.rect.top()
-            w = face.rect.right() - x
-            h = face.rect.bottom() - y
-
-            # 1- detect face area
-            roi_image = gray_human_image[y:y + h, x:x + w]
-            face_properties.append({'face': roi_image, 'loc': (x, y), 'size': (w, h)})
-
+                roi_image = human_image[y:y + h, x:x + w]
+                face_properties.append({'face': roi_image, 'loc': (x, y), 'size': (w, h)})
 
         return face_properties
 
