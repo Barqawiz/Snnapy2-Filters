@@ -68,6 +68,7 @@ class Detector:
         blob = cv2.dnn.blobFromImage(human_image, 1.0, (300, 300), [104, 117, 123], False, False)
  
         self.net.setInput(blob)
+        gray_img_human = cv2.cvtColor(human_image, cv2.COLOR_BGR2GRAY)
         detections = self.net.forward()
         for i in range(detections.shape[2]):
             confidence = detections[0, 0, i, 2]
@@ -77,7 +78,7 @@ class Detector:
                 w = int(detections[0, 0, i, 5] * image_width) - x
                 h = int(detections[0, 0, i, 6] * image_height) - y
 
-                roi_image = human_image[y:y + h, x:x + w]
+                roi_image = gray_img_human[y:y + h, x:x + w]
                 face_properties.append({'face': roi_image, 'loc': (x, y), 'size': (w, h)})
 
         return face_properties
