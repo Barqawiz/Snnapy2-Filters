@@ -60,7 +60,7 @@ class Detector:
         face_properties = []
         conf_threshold = 0.5
         image_height, image_width, _ = human_image.shape
-        print(human_image.shape)
+
         #faces = self.face_cascade.detectMultiScale(gray_human_image, 1.2, 7, minSize=(30, 30))
         #if len(faces) == 0:
         #    faces = self.face_cascade.detectMultiScale(gray_human_image, 1.1, 8, minSize=(30, 30))
