@@ -24,18 +24,23 @@ For GPU version download the code from [this brunch:](https://github.com/Barqawi
 
 ## Requirements
 Download the required libraries for code using following terminal command:
-- Option 1: install requirements directly
+- Option 1: install requirements directly:
 ```
 cd requirements
 pip install -r requirements.txt
 ```
-- Option 2: Import anaconda environment
+- Option 2: Import anaconda environment:
 ```
 cd requirements
 conda env create -f snappy2.yaml
 soruce activate snappy2
 ```
 if you don't have anaconda download from [here](https://anaconda.org/)
+
+## Imports
+```
+import Snappy2 as snappy2
+```
 
 ## Code Examples (How to)
 - Draw Mustache on face *(3 lines)*
@@ -68,19 +73,10 @@ snappy2.set_ears(human_image, gls_index=0)
 
 For more examples and code details use check (**Demo.py**)
 
-# Imports
-```
-import Snappy2 as snappy2
-```
-
-## Contributors
-1- Ahmad Barqawi (ahmadai.com)<br/>
-2- Contribute and add your name here<br/>
-
 ## Disclaimer
-This library uses photos available free in the internet, if any of example photos have license please contact the library owner directly to add the license or delete the content. Expected response on requests within 3 days.
-- Overlays provided from freepik
-- Faces provided from unsplash free data set
+This library utilizes photos that are freely accessible on the web. If any of the example photos have licensing restrictions, please reach out to the library owner directly for clarification or removal.
+- The overlays sourced from Freepik.
+- The faces from the Unsplash free data set.
 
 License
 -------

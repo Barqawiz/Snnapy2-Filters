@@ -22,7 +22,7 @@ Created on Sat Dec 16 22:46:28 2017
 """
 
 import cv2
-from keras.models import load_model
+from tensorflow.compat.v1.keras.models import load_model
 import numpy as np
 from utils.Utility import Utility
 import os
