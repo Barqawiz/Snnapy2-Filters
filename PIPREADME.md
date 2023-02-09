@@ -10,44 +10,59 @@ Snappy2 makes it easy to draw fun overlays on images. It uses a neural network t
 - draw any overlay
 - draw text
 
+[Click here for live snappy2 demo.](https://snappy2.ahmadai.com/)
+
 ## Classes
 1. **Snappy2**: the main class object and one place for all snappy library control.
 2. Detector: provides advanced functionality for getting face keypoints.
 3. FacePainter: helper functions for drawing on top of images based on the received keypoints.
 
 ## Imports
-```
+```python
 from snappy2 import Snappy2
 ```
 
 ## Code Examples (How to)
 - Draw Mustache on face *(3 lines)*
- ```
- human_image = snappy2.load_image('<file_path>')
+ ```python
+ snappy = Snappy2()
 
- snappy2 = Snappy2()
- snappy2.set_mustache(human_image, mus_index=0)
+ human_image = snappy.load_image('<file_path>')
+ snappy.set_mustache(human_image, mus_index=0)
  ```
 
 - Draw glasses on face *(3 lines)*
-```
-human_image = snappy2.load_image('<file_path>')
+```python
+snappy = Snappy2()
 
-snappy2 = Snappy2()
-snappy2.set_glasses(human_image, gls_index=0)
+human_image = snappy.load_image('<file_path>')
+snappy.set_glasses(human_image, gls_index=0)
 ```
 
 - Draw ears on face *(3 lines)*
-```
-human_image = snappy2.load_image('<file_path>')
+```python
+snappy = Snappy2()
 
-snappy2 = Snappy2()
-snappy2.set_ears(human_image, gls_index=0)
+human_image = snappy.load_image('<file_path>')
+snappy.set_ears(human_image, gls_index=0)
 ```
 
+- Draw text
+```python
+snappy = Snappy2()
+
+human_image = snappy.load_image('<file_path>')
+# parameters: path, text, text size, drawing location.
+snappy.set_text(human_image, 'Snappy2', 60, v_position='bottom')
+```
+
+- Display image for validation
+```
+human_image.show()
+```
 
 ### Github setup
-Github code available [here](https://github.com/Barqawiz/Snnapy2-Filters).
+Github code available [here](https://github.com/Barqawiz/Snnapy2-Filters).<br>
 For more examples check the (**Demo.py**).
 
 ## Disclaimer

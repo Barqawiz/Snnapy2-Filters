@@ -15,7 +15,7 @@ resources = get_resources()
 
 setup(
     name='snappy2',
-    version='0.2',
+    version='0.3',
     author='Albarqawi',
     packages=find_packages(),
     include_package_data=True,
