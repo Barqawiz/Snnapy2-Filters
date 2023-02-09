@@ -13,7 +13,7 @@ Detect faces in photos and draw overlay images on it, the overlay drawn using ne
 <img height="350px" src="resource/example/people_cover.png" alt="[ Cover Image ]"/>
 
 
-For GPU version download the code from [this brunch:](https://github.com/Barqawiz/Snnapy2-Filters/tree/dlib)
+For GPU version download the code from [this brunch.](https://github.com/Barqawiz/Snnapy2-Filters/tree/dlib)
 
 ## Classes
 1. **Snappy2**: main class object and one place for all snappy library control.
