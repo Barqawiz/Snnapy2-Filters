@@ -1,4 +1,5 @@
 # Snappy 2
+[![PyPI version](https://badge.fury.io/py/snappy2.svg)](https://badge.fury.io/py/snappy2)
 
 ## Introduction
 Snappy2 makes it easy to draw fun overlays on images. It uses a neural network to detect face keypoints and then uses those key points to draw overlays such as glasses, mustaches, hats, ears, and custom overlays on the face. The library is easy to use and comes with several code examples to get started quickly with a variety of drawing options:<br>
@@ -10,8 +11,6 @@ Snappy2 makes it easy to draw fun overlays on images. It uses a neural network t
 - draw text
 
 <img height="350px" src="snappy2/resource/example/people_cover.png" alt="[ Cover Image ]"/>
-
-For GPU optimized version, download the code from [this brunch.](https://github.com/Barqawiz/Snnapy2-Filters/tree/dlib)
 
 ## Classes
 1. **Snappy2**: main class object and one place for all snappy library control.
@@ -74,7 +73,8 @@ snappy.set_ears(human_image, gls_index=0)
 ```
 <img height="300px" src="snappy2/resource/example/ears_on_face.PNG" alt="[ Ears Image ]"/>
 
-For more examples and code details use check (**Demo.py**)
+For more examples and code details use check (**Demo.py**)<br>
+For GPU optimized version, download the code from [this brunch.](https://github.com/Barqawiz/Snnapy2-Filters/tree/dlib)
 
 ## Disclaimer
 This library utilizes photos that are freely accessible on the web. If any of the example photos have licensing restrictions, please reach out to the library owner directly for clarification or removal.
