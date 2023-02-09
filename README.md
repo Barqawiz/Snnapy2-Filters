@@ -53,7 +53,7 @@ from snappy2 import Snappy2
  snappy2 = Snappy2()
  snappy2.set_mustache(human_image, mus_index=0)
  ```
- <img height="300px" src="resource/example/tony_mustache.PNG" alt="[ Mustache Image ]"/>
+ <img height="300px" src="snappy2/resource/example/tony_mustache.PNG" alt="[ Mustache Image ]"/>
 
 - Draw glasses on face *(3 lines)*
 ```
