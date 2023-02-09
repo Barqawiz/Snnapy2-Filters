@@ -40,6 +40,9 @@ class Snappy2:
         self.detector = Detector()
         self.base_folder = os.path.dirname(__file__)
 
+    def load_image(self, image_path):
+        return Image.open(image_path)
+
     def draw_overlay_path(self, path_human, path_overlay, draw_pos=Constants.pos_eyes):#
         """
         Detect faces in photos and draw overlay images on it
