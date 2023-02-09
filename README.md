@@ -48,29 +48,29 @@ from snappy2 import Snappy2
 ## Code Examples (How to)
 - Draw Mustache on face *(3 lines)*
  ```
- human_image = snappy2.load_image('<file_path>')
-
- snappy2 = Snappy2()
- snappy2.set_mustache(human_image, mus_index=0)
+ snappy = Snappy2()
+ 
+ human_image = snappy.load_image('<file_path>')
+ snappy.set_mustache(human_image, mus_index=0)
  ```
  <img height="300px" src="snappy2/resource/example/tony_mustache.PNG" alt="[ Mustache Image ]"/>
 
 - Draw glasses on face *(3 lines)*
 ```
-human_image = snappy2.load_image('<file_path>')
+snappy = Snappy2()
 
-snappy2 = Snappy2()
-snappy2.set_glasses(human_image, gls_index=0)
+human_image = snappy.load_image('<file_path>')
+snappy.set_glasses(human_image, gls_index=0)
 ```
 
 <img height="300px" src="snappy2/resource/example/tony_glasses.PNG" alt="[ Glass Image ]"/>
 
 - Draw ears on face *(3 lines)*
 ```
-human_image = snappy2.load_image('<file_path>')
+snappy = Snappy2()
 
-snappy2 = Snappy2()
-snappy2.set_ears(human_image, gls_index=0)
+human_image = snappy.load_image('<file_path>')
+snappy.set_ears(human_image, gls_index=0)
 ```
 <img height="300px" src="snappy2/resource/example/ears_on_face.PNG" alt="[ Ears Image ]"/>
 
