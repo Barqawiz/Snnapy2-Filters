@@ -10,7 +10,7 @@ Detect faces in photos and draw overlay images on it, the overlay drawn using ne
 - draw any overlay
 - draw text
 
-<img height="350px" src="resource/example/people_cover.png" alt="[ Cover Image ]"/>
+<img height="350px" src="snappy2/resource/example/people_cover.png" alt="[ Cover Image ]"/>
 
 
 For GPU version download the code from [this brunch.](https://github.com/Barqawiz/Snnapy2-Filters/tree/dlib)
@@ -20,7 +20,7 @@ For GPU version download the code from [this brunch.](https://github.com/Barqawi
 2. Detector: if you want to use the library in more advanced way by getting key points dictionary.
 3. FacePainter: helper to draw on top of images based on received key points dictionary.
 
-<img height="300px" src="resource/example/arch.png" alt="[ Snappy2 Structure ]"/>
+<img height="300px" src="snappy2/resource/example/arch.png" alt="[ Snappy2 Structure ]"/>
 
 ## Requirements
 Download the required libraries for code using following terminal command:
@@ -60,7 +60,7 @@ snappy2 = Snappy2()
 snappy2.set_glasses(human_image, gls_index=0)
 ```
 
-<img height="300px" src="resource/example/tony_glasses.PNG" alt="[ Glass Image ]"/>
+<img height="300px" src="snappy2/resource/example/tony_glasses.PNG" alt="[ Glass Image ]"/>
 
 - Draw ears on face *(3 lines)*
 ```
@@ -69,7 +69,7 @@ human_image = Image.open('<file_path>')
 snappy2 = Snappy2()
 snappy2.set_ears(human_image, gls_index=0)
 ```
-<img height="300px" src="resource/example/ears_on_face.PNG" alt="[ Ears Image ]"/>
+<img height="300px" src="snappy2/resource/example/ears_on_face.PNG" alt="[ Ears Image ]"/>
 
 For more examples and code details use check (**Demo.py**)
 

@@ -1,14 +1,14 @@
 import argparse
 import os
 import PIL.Image as Image
-from Snappy2 import Snappy2
+from snappy2 import Snappy2
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-d", "--demo", help="Demo number", type=float)
 
 DEFAULT_INDEX = 2
 
-human_image = Image.open('resource/images/test_images/front_face.jpg')
+human_image = Image.open('snappy2/resource/images/test_images/front_face.jpg')
 
 def draw_glasses():
     print('0- draw_glasses')

@@ -24,7 +24,7 @@ Created on Sat Dec 16 22:46:28 2017
 import cv2
 from tensorflow.compat.v1.keras.models import load_model
 import numpy as np
-from utils.Utility import Utility
+from snappy2.utils.Utility import Utility
 import os
 
 

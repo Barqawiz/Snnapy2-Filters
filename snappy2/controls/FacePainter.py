@@ -20,8 +20,8 @@ Created on Sat Dec 16 22:46:28 2017
 @author: Ahmad Barqawi
 @Source: Github.com/Barqawiz
 """
-from utils.Constants import Constants
-from utils.Utility import Utility
+from snappy2.utils import Constants
+from snappy2.utils.Utility import Utility
 import PIL.Image as Image
 
 

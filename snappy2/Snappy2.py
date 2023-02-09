@@ -20,9 +20,13 @@ Created on Sat Dec 16 22:46:28 2017
 @author: Ahmad Barqawi
 @Source: Github.com/Barqawiz
 """
-from utils.Constants import Constants, Overlays
-from controls.Detector import Detector
-from controls.FacePainter import FacePainter
+import sys
+sys.path.insert(0, '..')
+
+# from utils.Constants import Constants, Overlays
+from snappy2.utils import Constants, Overlays
+from snappy2.controls import Detector
+from snappy2.controls import FacePainter
 import PIL.Image as Image
 from PIL import ImageFont, ImageDraw
 import cv2
