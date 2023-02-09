@@ -48,7 +48,7 @@ from snappy2 import Snappy2
 - Draw Mustache on face *(3 lines)*
  ```
  snappy = Snappy2()
- 
+
  human_image = snappy.load_image('<file_path>')
  snappy.set_mustache(human_image, mus_index=0)
  ```
@@ -73,7 +73,7 @@ snappy.set_ears(human_image, gls_index=0)
 ```
 <img height="300px" src="snappy2/resource/example/ears_on_face.PNG" alt="[ Ears Image ]"/>
 
-For more examples and code details use check (**Demo.py**)<br>
+For more examples and code details check (**Demo.py**)<br>
 For GPU optimized version, download the code from [this brunch.](https://github.com/Barqawiz/Snnapy2-Filters/tree/dlib)
 
 ## Disclaimer
