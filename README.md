@@ -39,7 +39,7 @@ if you don't have anaconda download from [here](https://anaconda.org/)
 
 ## Imports
 ```
-import Snappy2 as snappy2
+from snappy2 import Snappy2
 ```
 
 ## Code Examples (How to)
