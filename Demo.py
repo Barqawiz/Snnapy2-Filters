@@ -8,32 +8,30 @@ parser.add_argument("-d", "--demo", help="Demo number", type=float)
 
 DEFAULT_INDEX = 2
 
-human_image = Image.open('snappy2/resource/images/test_images/front_face.jpg')
+snappy = Snappy2()
+human_image = snappy.load_image('snappy2/resource/images/test_images/front_face.jpg')
 
 def draw_glasses():
     print('0- draw_glasses')
 
-    # create snnapy object to draw overlay
-    snappy2 = Snappy2()
-    snappy2.set_glasses(human_image, gls_index=0)
+    # draw overlay
+    snappy.set_glasses(human_image, gls_index=0)
     human_image.show()
 
 
 def draw_mustache():
     print('1- draw_mustache')
 
-    # create snnapy object to draw overlay
-    snappy2 = Snappy2()
-    snappy2.set_mustache(human_image, mus_index=0)
+    # draw overlay
+    snappy.set_mustache(human_image, mus_index=0)
     human_image.show()
 
 
 def draw_hat():
     print('2- draw_hat')
 
-    # create snnapy object to draw overlay
-    snappy2 = Snappy2()
-    snappy2.set_hat(human_image, hat_index=0, y_slide=0, width_increase_p=0.25)
+    # draw overlay
+    snappy.set_hat(human_image, hat_index=0, y_slide=0, width_increase_p=0.25)
 
     human_image.show()
 
@@ -41,18 +39,16 @@ def draw_hat():
 def draw_ears():
     print('3- draw_ears')
 
-    # create snnapy object to draw overlay
-    snappy2 = Snappy2()
-    snappy2.set_ears(human_image, ea_index=2)
+    # draw overlay
+    snappy.set_ears(human_image, ea_index=2)
     human_image.show()
 
 
 def draw_text():
     print('4- draw_text')
 
-    # create snnapy object to draw overlay
-    snappy2 = Snappy2()
-    snappy2.set_text(human_image, 'Snappy2', 60, v_position='bottom')
+    # draw overlay
+    snappy.set_text(human_image, 'Snappy2', 60, v_position='bottom')
     human_image.show()
 
 
