@@ -15,7 +15,7 @@ resources = get_resources()
 
 setup(
     name='snappy2',
-    version='0.3',
+    version='0.4',
     author='Albarqawi',
     packages=find_packages(),
     include_package_data=True,
@@ -23,6 +23,6 @@ setup(
     description="Detect faces and draw overlay images",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    install_requires=[ 'opencv-python==3.4.18.65', 'Pillow==9.4.0', 'tensorflow==2.9.0', 'keras==2.9.0', 'numpy==1.24.1', 'Markdown==3.4.1', 'absl-py==1.4.0', 'Werkzeug==2.2.2', 'h5py==3.1.0'    ],
+    install_requires=[ 'opencv-python==3.4.18.65', 'Pillow==9.4.0', 'tensorflow==2.9.0', 'keras==2.9.0', 'numpy==1.24.1', 'Markdown==3.4.1', 'absl-py==1.4.0', 'Werkzeug==2.2.2', 'h5py==3.1.0', 'intelli==0.0.8'    ],
     data_files=[('snappy2/resource', resources)]
 )
